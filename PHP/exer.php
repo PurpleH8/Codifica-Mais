@@ -1,4 +1,4 @@
 <?php 
-echo "eai mundo";
 
-?>
+$idade = 18;
+echo $idade;
