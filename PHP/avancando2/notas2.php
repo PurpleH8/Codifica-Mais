@@ -12,6 +12,9 @@ $notas2 = [
     'pietro' => 9
 ];
 $alunosFaltantes = array_diff_key($notas1, $notas2);
-var_dump(array_keys($alunosFaltantes));
-echo 'nota dos alunos faltantes:' . PHP_EOL;
-var_dump(array_values($alunosFaltantes));
+
+$nomesAlunos = (array_keys($alunosFaltantes));
+
+$notaAlunos = (array_values($alunosFaltantes));
+
+var_dump(array_combine($notaAlunos, $nomesAlunos));
