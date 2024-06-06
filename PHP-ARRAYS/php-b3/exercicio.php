@@ -22,7 +22,7 @@ echo "Agora me diz a altura em metros." . PHP_EOL;
 
 $altura = fgets(STDIN);
 
-//calcular o perímetro
+//calcular o perímetro e área
 
 $perimetro = 2 * ($largura + $altura);
 $area = $largura * $altura;
