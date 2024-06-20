@@ -37,13 +37,34 @@ body{
 }
 .especificacoes__segunda-coluna{
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: baseline;
+    flex: 1;
     border: 1px solid;
+    align-items: center;
+    gap: 10px;
+}
+.especificacoes__segunda-coluna button{
+    border: none;
+    background-color: white;
+    color: black;
+    margin: 1px;
 }
 .especificacoes__terceira-coluna{
-
+    border: 1px;
+    border-color: black;
+    align-items: center;
+    justify-content: space-between;
 }
 .imagem img {
     height: 100%;
+}
+.produto{
+    border: none;
+}
+.preco{
+    border: none;
+}
+button.escolhido{
+    background-color: rgb(202, 29, 29);
+    color: bisque;
 }
