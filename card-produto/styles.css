@@ -1,0 +1,124 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.matriz{
+    display: flex;
+    height: 250px;
+    width: 560px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px black;
+}
+
+.imagem{
+    flex: 0.5;
+    border: none;
+    overflow: hidden;
+}
+.imagem img {
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+.especificacoes__primeira-coluna{
+    justify-content: space-between;
+    border: none;
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.especificacoes{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: none;
+    padding: 1rem;
+    margin: 1px;
+}
+.especificacoes__segunda-coluna{
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    border: none;
+    align-items: center;
+    gap: 10px;
+} .especificacoes__segunda-coluna button{
+    border: none;
+    background-color: white;
+    color: black;
+    margin: 1px;
+    padding: 6px;
+    border-radius: 10px;
+
+    
+}
+button.escolhido{
+    background-color: rgb(202, 29, 29);
+    color: bisque;
+    padding: 6px;
+    margin: 1px;
+    border-radius: 10px;
+    border: 1px;
+}
+.especificacoes__terceira-coluna{
+    border: 1px;
+    border-color: black;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex: 1;
+
+}
+.especificacoes__quarta-coluna{
+    border: none;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+    margin: 1px;
+    justify-content: space-between;
+}
+.produto{
+    border: none;
+}
+.preco{
+    border: none;
+}
+button.comprar{
+    border: 1px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin: 1px;
+    padding: 6px;
+}button.adicionar{
+    padding: 6px;
+    border-color: black;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: white;
+    margin: 1px;
+}
+button.favoritar{
+    background-color: white;
+    color: yellow;
+    text-shadow: 0 1px 10px black;
+    padding: 6px;
+    margin: 1px;
+    border: 1px;
+    border-radius: 10px;
+    border-color: black;
+}
+button.especificacoes__segunda-coluna{
+
+    padding: 6px;
+    border-color: black;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: white;
+    margin: 1px;
+}
+
