@@ -17,8 +17,9 @@ body{
     border: 1px solid;
 }
 .imagem{
-    flex: 1;
-    border: 1px solid;
+    flex: 0.5;
+    border: none;
+    overflow: hidden;
 }
 .especificacoes__primeira-coluna{
     justify-content: space-around;
@@ -28,9 +29,10 @@ body{
 }
 .especificacoes{
     display: flex;
-    gap: 122%;
+    flex: 1;
     flex-direction: column;
-    border: 1px solid;
+    border: none;
+    padding: 1rem;
 }
 .especificacoes__segunda-coluna{
     display: flex;
