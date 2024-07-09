@@ -13,5 +13,3 @@ echo PHP_EOL;
 for ($i = 4; $i >= 0; $i--){
     echo "O " . ($i + 1) . "º elemento da lista é: " . $elemento[$i] . PHP_EOL;
 }
-?>
-
