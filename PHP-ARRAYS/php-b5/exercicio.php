@@ -11,6 +11,10 @@
  3- Subtraia o valor do desconto do valor original para obter o valor final com desconto.
  4- Retorne o valor final com desconto. */
  
+
+ echo "O sistema de nossa loja online";
+ 
+
  function desconto($valor, $porcent) {
     $valorDesconto = ($porcent / 100) * $valor;
     $valorFinal = $valor - $valorDesconto;
@@ -23,3 +27,4 @@ $porcent = readline("Desconto: ");
 $valorFinal = desconto($valor, $porcent);
 
 echo $valorFinal;
+
