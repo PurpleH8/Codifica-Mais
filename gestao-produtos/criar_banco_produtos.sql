@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 create database if not exists gestao_produtos;
 use gestao_produtos;
 
@@ -52,6 +53,11 @@ create table fornecedores(
     created_at timestamp default null,
     updated_at timestamp default current_timestamp
 );
+
+
+
+create database gestao_produtos;
+use gestao_produtos;
 
 
 
