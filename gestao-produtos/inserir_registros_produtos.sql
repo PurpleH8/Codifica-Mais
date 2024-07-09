@@ -1,0 +1,2 @@
+insert into banco_(id, nome, sku, descricao, categoria, preco, unidade_medida, peso, quantidade_estoque, fabricante, fornecedor, delated_at, created_at, updadted_at)
+values (1, 'Café', '47jk', 'é preto', 'alimentos', 14, )

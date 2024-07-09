@@ -1,0 +1,38 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px;
+}
+.matriz{
+    display: flex;
+    border: 1px solid;
+    flex: 0.5;
+    justify-content: center;
+    height: 260px;
+}
+.tamanhos{
+    justify-content: space-around;
+    border: 1px solid;
+}
+.imagem{
+    flex: 1;
+    border: 1px solid;
+}
+.especificacoes__primeira-coluna{
+    justify-content: space-around;
+    border: 1px solid;
+    flex-direction: row;
+
+}
+.especificacoes{
+    display: flex;
+    gap: 122%;
+    flex-direction: column;
+    border: 1px solid;
+}
+.especificacoes__segunda-coluna{
+    display: flex;
+    justify-content: space-around;
+}
