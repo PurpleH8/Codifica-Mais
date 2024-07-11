@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 create database if not exists gestao_produtos;
 use gestao_produtos;
 
