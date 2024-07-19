@@ -4,15 +4,14 @@ class Conta{
     //definir dados da conta
     public string $cpfTitular;
     public string $nomeTitular;
-    public float $saldo = 0;
+    private float $saldo = 0;
 
-    public function sacar(float $valorASacar){
+    public function sacar(float $valorASacar): void {
         if ($valorASacar > $this->saldo) {
             echo "Saldo indisponível.";
             return;
-        } else {
-            $this->saldo -= $valorASacar;
         }
+            $this->saldo -= $valorASacar;
     }
 
 
@@ -20,9 +19,10 @@ class Conta{
 
         if ($valorADepositar < 0) {
             echo "Valor precisa ser psitivo";
-        } else {
-            $this->saldo += $valorADepositar;
+            return;
         }
+           $this->saldo += $valorADepositar;
+        
     
     }
 
@@ -30,10 +30,11 @@ class Conta{
     {
         if ($valorATransferir > $this->saldo) {
             echo "Saldo não disponível.";
-        } else {
+            return;
+        }
             $this->sacar($valorATransferir);
             $contaDestino->depositar($valorATransferir);
-        }
+        
     }
 }
 
