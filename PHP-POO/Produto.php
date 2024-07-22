@@ -16,11 +16,11 @@ class Produto{
     }
     
     public function  alterarPreco($novoPreco){
-
+        $this->preco = $novoPreco;
     }
 
     public function ajustarEstoque($quantidade){
-
+        $this->quantidadeEstoque = $quantidade;
     }
 
     public function exibirDetalhes(){
