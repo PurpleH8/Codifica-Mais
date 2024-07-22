@@ -24,12 +24,12 @@ select * from produtos;
 create table categorias(
     id int AUTO_INCREMENT PRIMARY KEY,
     nome_categoria varchar(30),
-updated_at datetime default current_timestamp,
-deleted_at timestamp default current_timestamp on update current_timestamp,
-created_at datetime default current_timestamp
+created_at datetime default current_timestamp,
+updated_at timestamp default current_timestamp on update current_timestamp,
+deleted_at timestamp null default null
 );
 
-create table uninades_medidas(
+create table unidades_medidas(
 	id int AUTO_INCREMENT PRIMARY KEY,
     nome_categoria varchar(100),
     deleted_at timestamp default current_timestamp,
