@@ -32,7 +32,7 @@ abstract class Veiculos{
     }
 
 }
-require_once 'src/Veiculos;'
+require_once 'src/Veiculos;';
 
 
 
