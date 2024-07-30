@@ -15,3 +15,32 @@ tipo Animal e chama o método fazerSom desse objeto.
 8. Crie objetos das classes Cachorro e Gato e passe-os para a função 
 fazerAnimalEmitirSom. ]
 */
+
+interface Animal{
+    public function fazerSom();
+}
+
+abstract class Mamifero implements Animal{
+    protected $nome;
+
+    public function __construct($nome){
+        $this->nome = $nome;
+    }
+}
+
+class Cachorro extends Mamifero{
+    public function fazerSom(){
+        return "o cachorro $this->nome latiu" . PHP_EOL . "AUAUAUAUAUAUAUAUAUAUAUAUAUAUAUAUUAUAUAUUAU" . PHP_EOL . PHP_EOL . PHP_EOL;
+    }
+}
+
+class Gato extends Mamifero{
+    public function fazerSom(){
+        return "o gato $this->nome miou" . PHP_EOL . "MINHAAUUUUUUUUUUUUUUU" . PHP_EOL . PHP_EOL . PHP_EOL;
+    }
+}
+
+function fazerAnimalEmitirSom($animal){
+    echo $animal->fazerSom() . PHP_EOL;
+
+}
