@@ -1,16 +1,22 @@
 <?php
 
-abstract class ProdutoPerecivel extends Produto{
-    
-    public $dataValidade;
-    public $dataAtual;
+require_once 'produto.php';
+require_once 'ProdutoInterface.php';
 
-    public function __construct ($dataValidade , $dataFabricacao , $dataAtual) {
+class ProdutoPerecivel extends Produto{
+    
+    protected $dataValidade;
+
+    public function __construct ($sku, $nome, $preco, $quantidade, $dataValidade, $cor) {
+        parent::__construct($sku, $nome, $preco, $quantidade, $cor);
         $this->dataValidade = $dataValidade;
-        $this->dataAtual = $dataAtual;
+        
     }
 
-    //$dataAtual = new DateTime(date('Y-m-d'));
-    //$dataValidade = new DateTime('2016-10-01');
+    public function getDataValidade() {
+        return $this->dataValidade;
+    }
 
+   
 }
+

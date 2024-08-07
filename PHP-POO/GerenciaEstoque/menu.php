@@ -1,6 +1,9 @@
 <?php
 
 require_once 'produto.php';
+require_once 'ProdutoPerecivel.php';
+require_once 'estoque.php';
+
 function exibirMenu() {
     echo PHP_EOL;
     echo "Escolha uma das opções abaixo: " . PHP_EOL;
@@ -13,6 +16,8 @@ function exibirMenu() {
     return $opcao;
 }
 
+$estoque = new Estoque();
+
 while (true) {
 
     $opcao = exibirMenu();
@@ -20,15 +25,17 @@ while (true) {
     switch ($opcao) {
         case 1:
             echo "Adicionar um produto\n";
-            $estoque = readline('Qual o nome do estoque? ');
             $sku = readline("Digite o Código do produto: ");
             $nome = readline("Digite o Nome do produto: ");
-            $unidadeMedida = readline("Digite os Quilos ou Litros: ");
+            $cor = readline('Qual a cor do produto? ');
             $preco = readline('Qual o preço?: ');
             $quantidade = readline("Digite a Quantidade: ");
-            $cor = readline("Digite a Cor: ");
+            $dataValidade = readline("Digite a Data de Validade (YYYY-MM-DD): ");
             
-            $produtoum = new Produto($estoque, $sku, $nome, $unidadeMedida, $preco, $quantidade, $cor);
+            $produto = new ProdutoPerecivel($sku, $nome, $preco, $quantidade, $dataValidade, $cor);
+
+            $estoque->adicionarProduto($produto);
+            echo "Produto adicionado com sucesso." . PHP_EOL . PHP_EOL . '========================================================================' . PHP_EOL;
             
 
             
@@ -36,26 +43,48 @@ while (true) {
         case 2:
             echo "Remover um produto\n";
             // Implemente aqui o código para a opção 2
-            $codigo = readline("Digite o código do produto: ");
+            $sku = readline("Digite o código do produto: ");
             $quantidade = readline("Digite a quantidade: ");
-            venderProduto($estoque, $codigo, $quantidade);
+            $estoque->venderProduto($sku, $quantidade);
+            
+
+
+
+
+
             break;
         case 3:
             echo "Verificar Estoque\n";
             // Implemente aqui o código para a opção 3
 
-            $codigo = readline("Digite o código do produto");
+            $sku = readline("Digite o código do produto");
+
+            $produto = $estoque->produtos[$sku] ?? null;
+            if ($produto) {
+                echo "Código: " . $produto->getSku() . PHP_EOL . "Nome: " . $produto->getNome() . PHP_EOL . "Preço: " . $produto->getPreco() . PHP_EOL . "Quantidade: " . $produto->getQuantidade() . PHP_EOL . PHP_EOL . PHP_EOL . '========================================================================' . PHP_EOL;
+            } else {
+                echo "O produto não foi encontrado." . PHP_EOL . PHP_EOL . '========================================================================';
+            }
+
+
+
+
             break;
         case 4:
             echo "Listar o Estoque\n";
             // Implemente aqui o código para a opção 4
-            listarEstoque($estoque);
+            $estoque->listarProdutos();
+
+
+
+
+
             break;
         case 5:
-            echo "Saindo...\n";
+            echo "Saindo..." . PHP_EOL;
             exit; // Sai do loop e encerra o script
         default:
-            echo "Opção inválida, por favor tente novamente.\n";
+            echo "Opção inválida, por favor tente novamente." . PHP_EOL;
             break;
     }
 }

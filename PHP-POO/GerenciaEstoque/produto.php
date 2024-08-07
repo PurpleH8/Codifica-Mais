@@ -1,20 +1,21 @@
 <?php 
-
+require_once 'ProdutoPerecivel.php';
 require_once 'ProdutoInterface.php';
 
-abstract class Produto implements ProdutoInterface {
+ class Produto  {
 
-protected $estoque;
+
 protected $sku;
 protected $nome;
 protected $unidadeMedida;
 protected $quantidade;
 protected $preco;
 protected $cor;
+protected $dataValidade;
 
-public function __construct($estoque , $sku, $nome, $unidadeMedida, $preco, $quantidade, $cor) {
+public function __construct($sku, $nome, $unidadeMedida, $preco, $quantidade, $cor) {
 
-    $this->estoque = $estoque;
+
     $this->sku = $sku;
     $this->nome = $nome;
     $this->unidadeMedida = $unidadeMedida;
@@ -23,32 +24,34 @@ public function __construct($estoque , $sku, $nome, $unidadeMedida, $preco, $qua
     $this->cor = $cor;
 }
 
-public function getNome() {
-
-}
-
 public function getSku() {
-
+    return $this->sku;
+}
+public function getNome() {
+    return $this->nome;
 }
 
 public function getPreco() {
-
-}
-
-public function getEstoque() {
-
+    return $this->preco;
 }
 
 public function getQuantidade() {
-
+    return $this->quantidade;
 }
 
+public function setQuantidade($quantidade) {
+    $this->quantidade = $quantidade;
+}
 public function getUnidadeMedida() {
-
+    return $this->unidadeMedida;
 }
 
 public function getCor() {
+    return $this->cor;
+}
 
+public function getDataValidade() {
+    return $this->dataValidade;
 }
 
 }
