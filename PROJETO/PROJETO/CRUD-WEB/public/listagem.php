@@ -7,6 +7,7 @@ session_start();
 <html lang="pt-br">
 <hea>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/listagem.css">
     <title>Listagem de produtos</title>
@@ -53,12 +54,12 @@ session_start();
                 </div>
                 
                 <div class="mid_esquerda_coluna_colunadois">
-                    <div class="produto_item_esquerda_coluna_colunadois">
-                        <p>Codifica+</p> 
-                    </div>
+                    <p class="produto_item_esquerda_coluna_colunadois">
+                        Codifica+ 
+                    </p>
                 </div>
 
-                <button class="bot_esquerda_coluna_colunadois">
+                <button class="bot_esquerda_coluna_editar">
                     
                     
                         Editar
@@ -71,18 +72,22 @@ session_start();
             <div class="direita_coluna_colunadois">
                 <div class="top_direita_coluna_colunadois">   
 
-                    <div class="codigo_sku">
+                    <p class="codigo_sku">
                         SKU: 123456
-                    </div>
+                    </p>
 
                 </div>
 
                 <div class="mid_direita_coluna_colunadois">
-                    Quantidade: 100
+
+                    <p class="quantidade_item_colunadois">
+                        Quantidade: 45
+                    </p>
+
                 </div>
 
-                <button class="bot_direita_coluna_colunadois">
-                    deletar
+                <button class="bot_direita_coluna_deletar">
+                    Deletar
                 </button>
 
             </div>
@@ -102,32 +107,86 @@ session_start();
 
                 </div>
 
-                
+                <div class="mid_esquerda_coluna_colunatres">
+                    <p class="produto_item_esquerda_coluna_colunatres">
+                        Notebook
+                    </p>
+                </div>
+
+                <button class="bot_esquerda_coluna_editar">
+                    Editar
+                </button>
+
             </div>
 
             <div class="direita_coluna_colunatres">
-                <div class="codigo_item_direita_coluna_colunatres">
-                    ajniauefnjkbis
+
+                <p class="codigo_sku">
+                    SKU: 123456
+                </p>
+
+                <div class="mid_direita_coluna_colunatres">
+
+                    <p class="quantidade_item_colunatres">
+                        Quantidade: 45
+                    </p>
+
                 </div>
+
+                <button class="bot_direita_coluna_deletar">
+                    Deletar
+                </button>
+
             </div>
+
         </div>
 
         <div class="coluna_quatro">
-        <div class="esquerdo_coluna_colunaquatro">
-                <div class="codigo_item_esquerda_coluna_colunaquatro">
-                    09121092841
+            <div class="esquerdo_coluna_colunaquatro">
+                <div class="top_esquerda_coluna_colunaquatro">
+                    
+                    <div class="codigo_item_esquerda_coluna_colunaquatro">
+                        <p>#000003</p>
+                    </div>
+                    
+                    <div class="tipo_item_esquerda_coluna_colunaquatro">
+                        <p>Escritório</p>
+                    </div>
+
                 </div>
 
-                <div class="tipo_item_esquerda_coluna_colunaquatro">
-                    tipo
+                <div class="mid_esquerda_coluna_colunaquatro">
+                    <p class="produto_item_esquerda_coluna_colunaquatro">
+                        Caderno Anotação
+                    </p>
                 </div>
+
+                <button class="bot_esquerda_coluna_editar">
+                    Editar
+                </button>
+
             </div>
 
             <div class="direita_coluna_colunaquatro">
-                <div class="codigo_item_direita_coluna_colunaquatro">
-                    ajniauefnjkbis
+
+                <p class="codigo_sku">
+                    SKU: 123456
+                </p>
+
+                <div class="mid_direita_coluna_colunaquatro">
+
+                    <p class="quantidade_item_colunaquatro">
+                        Quantidade: 100
+                    </p>
+
                 </div>
+
+                <button class="bot_direita_coluna_deletar">
+                    Deletar
+                </button>
+
             </div>
+
         </div>
 
     </div>
