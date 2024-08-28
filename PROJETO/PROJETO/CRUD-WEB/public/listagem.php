@@ -12,183 +12,84 @@ session_start();
     <link rel="stylesheet" href="css/listagem.css">
     <title>Listagem de produtos</title>
 </head>
+
 <body>
-    <div class="tudo"> 
-        <div class="coluna_um">
-            <div class="coluna_cima_um">
-            
-                <div class="novo_item">
 
-                    NovoItem
+    <div class="tudo">
+        <h1 class="buscar_item">Buscar item</h1>
+        <input type="text" placeholder="Buscar...">
 
+        <div class="item">
+            <div class="item_cabecalho">
+
+                <div>
+                    <span class="item_id">#000001</span>
+                    <span class="item_tipo">vestuário</span>
+                </div>
+
+                <div>
+                    <button class="botao botao_red">Deletar</button>
                 </div>
 
             </div>
 
-            <div class="coluna_cima_dois">
-
-                <div class="pesquisar">
-
-                    <div class="barra_pesquisar">
-                        <input type="text" placeholder="Buscar item" class="barra_pesquisar_original">
-                    </div>
+            <div class="item_detalhes">
+                <div>
+                    <span class="item_nome">Camisa codifica+</span>
+                </div>
+                <div>
+                    <span class="item_sku">SKU: 123456</span>
+                    <span class="item_quantidade">Quantidade: 100</span>
                 </div>
             </div>
-
-        
+            <button class="botao">Editar</button>
         </div>
 
-        <div class="coluna_dois">
-            <div class="esquerdo_coluna_colunadois">
-
-                <div class="top_esquerda_coluna_colunadois">
-                    
-                    <div class="codigo_item_esquerda_coluna_colunadois">
-                        <p>#000001</p>
-                    </div>
-
-                    <div class="tipo_item_esquerda_coluna_colunadois">
-                        <p>vestuário</p>
-                    </div>
-
+        <div class="item">
+            <div class="item_cabecalho">
+                <div>
+                    <span class="item_id">#000002</span>
+                    <span class="item_tipo">eletrônico</span>
                 </div>
-                
-                <div class="mid_esquerda_coluna_colunadois">
-                    <p class="produto_item_esquerda_coluna_colunadois">
-                        Codifica+ 
-                    </p>
+                <div>
+                    <button class="botao botao_red">Deletar</button>
                 </div>
-
-                <button class="bot_esquerda_coluna_editar">
-                    
-                    
-                        Editar
-                    
-                    
-                </button>
-
             </div>
-
-            <div class="direita_coluna_colunadois">
-                <div class="top_direita_coluna_colunadois">   
-
-                    <p class="codigo_sku">
-                        SKU: 123456
-                    </p>
-
+            <div class="item_detalhes">
+                <div>
+                    <span class="item_nome">Notebook</span>
                 </div>
-
-                <div class="mid_direita_coluna_colunadois">
-
-                    <p class="quantidade_item_colunadois">
-                        Quantidade: 45
-                    </p>
-
+                <div>
+                    <span class="item_sku">SKU: 123456</span>
+                    <span class="item_quantidade">Quantidade: 45</span>
                 </div>
-
-                <button class="bot_direita_coluna_deletar">
-                    Deletar
-                </button>
-
             </div>
+            <button class="botao">Editar</button>
         </div>
 
-        <div class="coluna_tres">
-            <div class="esquerdo_coluna_colunatres">
-                <div class="top_esquerda_coluna_colunatres">
-                    
-                    <div class="codigo_item_esquerda_coluna_colunatres">
-                        <p>#000002</p>
-                    </div>
-                    
-                    <div class="tipo_item_esquerda_coluna_colunatres">
-                        <p>eletrônico</p>
-                    </div>
-
+        <div class="item">
+            <div class="item_cabecalho">
+                <div>
+                    <span class="item_id">#000003</span>
+                    <span class="item_tipo">escritório</span>
                 </div>
-
-                <div class="mid_esquerda_coluna_colunatres">
-                    <p class="produto_item_esquerda_coluna_colunatres">
-                        Notebook
-                    </p>
+                <div>
+                    <button class="botao botao_red">Deletar</button>
                 </div>
-
-                <button class="bot_esquerda_coluna_editar">
-                    Editar
-                </button>
-
             </div>
-
-            <div class="direita_coluna_colunatres">
-
-                <p class="codigo_sku">
-                    SKU: 123456
-                </p>
-
-                <div class="mid_direita_coluna_colunatres">
-
-                    <p class="quantidade_item_colunatres">
-                        Quantidade: 45
-                    </p>
-
+            <div class="item_detalhes">
+                <div>
+                    <span class="item_nome">Caderno Anotação</span>
                 </div>
-
-                <button class="bot_direita_coluna_deletar">
-                    Deletar
-                </button>
-
+                <div>
+                    <span class="item_sku">SKU: 123456</span>
+                    <span class="item_quantidade">Quantidade: 15</span>
+                </div>
             </div>
-
+            <button class="botao">Editar</button>
         </div>
 
-        <div class="coluna_quatro">
-            <div class="esquerdo_coluna_colunaquatro">
-                <div class="top_esquerda_coluna_colunaquatro">
-                    
-                    <div class="codigo_item_esquerda_coluna_colunaquatro">
-                        <p>#000003</p>
-                    </div>
-                    
-                    <div class="tipo_item_esquerda_coluna_colunaquatro">
-                        <p>Escritório</p>
-                    </div>
-
-                </div>
-
-                <div class="mid_esquerda_coluna_colunaquatro">
-                    <p class="produto_item_esquerda_coluna_colunaquatro">
-                        Caderno Anotação
-                    </p>
-                </div>
-
-                <button class="bot_esquerda_coluna_editar">
-                    Editar
-                </button>
-
-            </div>
-
-            <div class="direita_coluna_colunaquatro">
-
-                <p class="codigo_sku">
-                    SKU: 123456
-                </p>
-
-                <div class="mid_direita_coluna_colunaquatro">
-
-                    <p class="quantidade_item_colunaquatro">
-                        Quantidade: 100
-                    </p>
-
-                </div>
-
-                <button class="bot_direita_coluna_deletar">
-                    Deletar
-                </button>
-
-            </div>
-
-        </div>
-
+        <button class="botao">Novo Item</button>
     </div>
 
     

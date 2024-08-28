@@ -1,0 +1,15 @@
+{
+    "name": "iro/vedor",
+    "autoload": {
+        "psr-4": {
+            "Iro\\Vedor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PurpleH8",
+            "email": "kusuosaiki51@gmail.com"
+        }
+    ],
+    "require": {}
+}
