@@ -83,7 +83,7 @@ body {
   display: flex;
   justify-items: space-between;
   flex-direction: column;
-  gap: 10px;
+  gap: 3rem;
 }
 .coluna {
   border: 1px solid black;

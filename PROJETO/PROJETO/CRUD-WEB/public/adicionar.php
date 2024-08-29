@@ -42,9 +42,7 @@ session_start();
                 </label>
             </div>
 
-        </div>
-
-        <div class="coluna">
+            <div class="coluna">
 
             <input type="text" placeholder="Valor" class="escrever_opcao">
 
@@ -63,6 +61,10 @@ session_start();
                     <option value="5">Vestuários</option>
                     <option value="6">Outros</option>
                 </select>
+
+        </div>
+
+        
 
         </div>
 
