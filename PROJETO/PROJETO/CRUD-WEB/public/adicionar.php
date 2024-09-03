@@ -44,9 +44,9 @@ session_start();
 
             <div class="coluna">
 
-            <input type="text" placeholder="Valor" class="escrever_opcao">
+                <input type="text" placeholder="Valor" class="escrever_opcao">
 
-            <input type="text" placeholder="Quantidade" class="escrever_opcao">
+                <input type="text" placeholder="Quantidade" class="escrever_opcao">
 
         </div>
 
@@ -68,7 +68,7 @@ session_start();
 
         </div>
 
-        <button class="botao">Criar item</button>
+        <a href="editarItem.php"><button class="botao">Novo Item</button></a>
     </div>
 
 </body>

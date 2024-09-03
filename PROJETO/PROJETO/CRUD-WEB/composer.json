@@ -1,15 +1,9 @@
 {
-    "name": "iro/vedor",
+    "name": "iro/ior",
     "autoload": {
         "psr-4": {
-            "Iro\\Vedor\\": "src/"
+            "App\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "PurpleH8",
-            "email": "kusuosaiki51@gmail.com"
-        }
-    ],
     "require": {}
 }
