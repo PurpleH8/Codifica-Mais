@@ -2,6 +2,21 @@
     // Inicia a sessão
     session_start();
 
+    require __DIR__ . "/../vendor/autoload.php";
+
+    use App\Controller\ProdutosController;
+
+    $produto = new ProdutosController;
+
+    $caminho = rtrim($_SERVER['PATH_INFO'], '/');
+
+    if ($caminho == "/Produto/adicionar") {
+        return $produto->criar();
+    }
+    if ($caminho == "/Produto/editarItem") {
+        return $produto->editar();
+    }
+
     // Define o array de categorias, unidades de medida e produtos
     $_SESSION['categorias'] = [
         '1' => 'Eletrônicos',

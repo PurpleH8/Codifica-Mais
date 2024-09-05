@@ -60,14 +60,20 @@ session_start();
                     <option value="5">Vestuários</option>
                     <option value="6">Outros</option>
                 </select>
-
+            </label>
         </div>
 
         
 
     </div>
 
-        <button class="botao">Atualizar</button>
+    <div class="botaofinal">
+
+        <button class="botao">CONFIRMAR</button>
+        <a href="listagem.php"><button class="botao">Voltar</button></a>
+
+    </div>
+        
 </div>
     
 </body>

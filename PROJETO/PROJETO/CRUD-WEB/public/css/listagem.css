@@ -96,3 +96,10 @@ body {
   justify-content: space-between;
   
 }
+.botaofinal {
+  justify-content: space-between;
+  justify-items: space-between;
+  flex-direction: row;
+  display: flex;
+  
+}

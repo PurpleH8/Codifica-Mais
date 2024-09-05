@@ -89,7 +89,13 @@ session_start();
             <button class="botao">Editar</button>
         </div>
 
-        <a href="adicionar.php"><button class="botao">Novo Item</button></a>
+        <div class="botaofinal">
+
+            <a href="adicionar.php"><button class="botao">Novo Item</button></a>
+            <a href="editarItem.php"><button class="botao">Atualizar</button></a>
+
+        </div>
+        
     </div>
 
     

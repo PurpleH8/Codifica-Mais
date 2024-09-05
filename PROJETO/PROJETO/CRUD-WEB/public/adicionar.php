@@ -66,9 +66,19 @@ session_start();
 
         
 
-        </div>
+        </div>  
 
-        <a href="editarItem.php"><button class="botao">Novo Item</button></a>
+        <div class="botaofinal">
+
+            <button class="botao">CONFIRMAR</button>
+
+            <a href="listagem.php">
+                <button class="botao">Voltar</button>
+            </a>
+
+        </div>
+        
+        
     </div>
 
 </body>
