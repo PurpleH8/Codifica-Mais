@@ -1,0 +1,15 @@
+{
+    "name": "idcap/crud-web",
+    "autoload": {
+        "psr-4": {
+            "Idcap\\CrudWeb\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PurpleH8",
+            "email": "kusuosaiki51@gmail.com"
+        }
+    ],
+    "require": {}
+}

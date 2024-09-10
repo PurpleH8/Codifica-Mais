@@ -70,7 +70,7 @@ session_start();
     <div class="botaofinal">
 
         <button class="botao">CONFIRMAR</button>
-        <a href="listagem.php"><button class="botao">Voltar</button></a>
+        <a href="listar.php"><button class="botao">Voltar</button></a>
 
     </div>
         

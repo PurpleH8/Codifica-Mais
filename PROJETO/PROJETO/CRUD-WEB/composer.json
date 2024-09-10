@@ -1,9 +1,0 @@
-{
-    "name": "iro/ior",
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
-    },
-    "require": {}
-}
