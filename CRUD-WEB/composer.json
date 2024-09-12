@@ -2,7 +2,7 @@
     "name": "idcap/crud-web",
     "autoload": {
         "psr-4": {
-            "Idcap\\CrudWeb\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [

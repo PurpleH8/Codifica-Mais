@@ -6,6 +6,7 @@
     require __DIR__ . "/../vendor/autoload.php";
     require __DIR__ . '/../src/helper.php';
     require __DIR__ . '/../src/Controller/ProdutosController.php';
+    //require __DIR__ . '/../src/View/editar.php';
 
     use App\Controller\ProdutosController;
     
@@ -67,7 +68,8 @@
         '8' => 'm²',
     ];
 
-    $_SESSION['produtos'] = [[
+    $_SESSION['produtos'] = [
+        [
             'id' => 1,
             'nome' => 'Smartphone',
             'sku' => '123456',
