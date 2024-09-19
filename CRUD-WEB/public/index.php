@@ -11,29 +11,35 @@
     use App\Controller\ProdutosController;
     
     $produto = new ProdutosController();
+    $caminho = rtrim($_SERVER['REQUEST_URI'], "/");
+
+    /*if ($caminho == '/produto') {
+        return $produto->listar();
+    }*/
+    //use ProdutosController();
     
-    $_SESSION['produtos'] = [[
-        'id' => 1,
-        'nome' => 'Camiseta Codifica +',
-        'sku' => '123456',
-        'unidade_medida_id' => '1',
-        'valor' => 1500.00,
-        'quantidade' => 10,
-        'categoria' => 'vestuário', 
-        'categoria_id' => '1',
-    ],[
-        'id' => 2,
-        'nome' => 'Geladeira',
-        'sku' => '123457',
-        'unidade_medida_id' => '2',
-        'valor' => 2500.00,
-        'quantidade' => 5,
-        'categoria_id' => '2',
-    ],
-];
+    $_SESSION['produtos'] = [
+        [
+            'id' => 1,
+            'nome' => 'Camiseta Codifica +',
+            'sku' => '123456',
+            'unidade_medida_id' => '1',
+            'valor' => 1500.00,
+            'quantidade' => 10,
+            'categoria' => 'vestuário', 
+            'categoria_id' => '1',
+        ],[
+            'id' => 2,
+            'nome' => 'Geladeira',
+            'sku' => '123457',
+            'unidade_medida_id' => '2',
+            'valor' => 2500.00,
+            'quantidade' => 5,
+            'categoria_id' => '2',
+        ],
+    ];
 
     $caminho = rtrim($_SERVER['PATH_INFO'], '/');
-    
     
      if ($caminho == "/listar") {
         return $produto->listar();
