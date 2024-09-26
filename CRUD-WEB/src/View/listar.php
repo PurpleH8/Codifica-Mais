@@ -31,7 +31,9 @@ session_start();
                             <?php echo $produto['id'] ?>
 
                         </span>
-                        <span class="item_tipo"><?php echo $produto['categoria'] ?>
+                        <!-- <span class="item_tipo"><?php echo $produto['categoria'] 
+                        ?> -->
+                         
                         </span>
                     </div>
 

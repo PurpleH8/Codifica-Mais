@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 use App\src\ConexaoBD;
+use PDO;
 
 require __DIR__ . "/../ConexaoBD.php";
 
@@ -18,14 +19,24 @@ class ProdutosController
     }
     public function listar()
     {
-
-       dd('teste');
-        require __DIR__ . "/../src/View/listar.php";
+        $sql = 'estoque';
+        $sql = 'SELECT * FROM categoria';
+        $sql = 'SELECT * FROM produto';
+        
+        $banco = $this->pdo->query($sql);
+        
+        $produtos = $banco->fetchAll(PDO::FETCH_ASSOC);
+        
+        require __DIR__ . '/../View/listar.php';
+      //use estoque;
     }
 
+
+    
+
      public function editar() {
-        //echo 'ola';
-         require __DIR__ . "/../View/editar.php";
+        dd('ola') ;
+        require __DIR__ . "/../View/editar.php";
     }
     public function criar() {
         //echo 'blz?';
@@ -48,7 +59,6 @@ class ProdutosController
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
         $categoria_id = filter_input(INPUT_POST, 'categoria_id', FILTER_VALIDATE_INT);
        
-       continua ...
 
         // Garantir que os dados são válidos antes de tentar executar
         if (!$sku || !$nome || !$categoria_id || !$quantidade || !$valor || !$unidade_medida_id) {
