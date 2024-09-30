@@ -1,0 +1,12 @@
+
+    {
+        "name": "nefo/buscador-cursos",
+        "description": "Projeto que busca os cursos no site da Alura",
+        "type": "library",
+        "authors": [
+            {
+                "name": "nefo",
+                "email": "rod.nef@gmail.com"
+            }
+        ]
+}
