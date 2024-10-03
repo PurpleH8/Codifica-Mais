@@ -1,10 +1,8 @@
 <?php
     // Inicia a sessão
 
-    require __DIR__ . "/../vendor/autoload.php";
-    require __DIR__ . '/../src/helper.php';
-    require __DIR__ . '/../src/Controller/ProdutosController.php';
-    //require __DIR__ . '/../src/View/editar.php';
+    require_once __DIR__ . "/../vendor/autoload.php";
+    require_once __DIR__ . '/../src/helper.php';
 
     use App\Controller\ProdutosController;
     
@@ -23,8 +21,3 @@
     if ($caminho == "/editar") {
          return $produto->editar();
     }
-
-    // Redireciona para a página de listagem
-    header('Location: listar.php');
-
-?>

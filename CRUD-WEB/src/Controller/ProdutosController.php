@@ -3,10 +3,9 @@
 
 namespace App\Controller;
 
-use App\src\ConexaoBD;
+use App\ConexaoBD;
 use PDO;
 
-require __DIR__ . "/../ConexaoBD.php";
 
 class ProdutosController 
 
@@ -18,9 +17,7 @@ class ProdutosController
         $this->pdo = ConexaoBD::createConnection();
     }
     public function listar()
-    {
-        $sql = 'estoque';
-        $sql = 'SELECT * FROM categoria';
+    {     
         $sql = 'SELECT * FROM produto';
         
         $banco = $this->pdo->query($sql);
@@ -35,7 +32,17 @@ class ProdutosController
     
 
      public function editar() {
-        dd('ola') ;
+        $itemId = $_GET['id'];
+       
+ 
+        //fazer consulta no banco de dados buscando o item pelo id
+        $sql = 'SELECT * FROM produto where id = ' . $itemId;
+
+        $banco = $this->pdo->query($sql);
+
+        $produto = $banco->fetch(PDO::FETCH_ASSOC);
+        //dd($produto);
+        //salvar o item retornado  no banco de dados em uma variavel
         require __DIR__ . "/../View/editar.php";
     }
     public function criar() {
@@ -43,6 +50,12 @@ class ProdutosController
          require __DIR__ . "/../View/adicionar.php";
     }
     public function deletar() {
+        $itemId = $_GET['id'];
+
+        $sql = 'DELETE * FROM produto where id = ' . $itemId;
+        $banco = $this->pdo->query($sql);
+        $produto = $banco->fetchAll(PDO::FETCH_ASSOC);
+
         require __DIR__ . "/../View/deletar.php";
     }
     /*public function salvar()

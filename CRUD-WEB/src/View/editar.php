@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -20,35 +21,35 @@ session_start();
         
     <div class="colunas">
         <div class="coluna">
-            <input type="text" placeholder="Nome Item" class="nome_item">
+            <input type="text" value="<?php echo $produto['nome']?>" class="nome_item" name="nome">
         </div>
 
         <div class="coluna">
 
-            <input type="text" placeholder="Sku" class="escrever_opcao">
+            <input type="text" value="<?php echo $produto['sku']?>" class="escrever_opcao" name="sku">
 
-            <label for="categoria_adicionar" class="escrever_opcao">
-                <select name="categoria_adicionar" class="categoria_adicionar">
-                    <option value="1">Un</option>
-                    <option value="2">Kg</option>
-                    <option value="3">G</option>
-                    <option value="4">L</option>
-                    <option value="5">Mm</option>
-                    <option value="6">Cm</option>
-                    <option value="7">M</option>
-                    <option value="8">M²</option>
+            <label for="unidade_medida" class="escrever_opcao">
+                <select name="unidade_medida" class="categoria_adicionar">
+                    <option value="1" <?php ($produto['unidade_medida_id'] == 1 ? 'selected' : '') ?>>Un</option>
+                    <option value="2"<?php ($produto['unidade_medida_id'] == 2 ? 'selected' : '') ?>>Kg</option>
+                    <option value="3"<?php ($produto['unidade_medida_id'] == 3 ? 'selected' : '') ?>>G</option>
+                    <option value="4"<?php ($produto['unidade_medida_id'] == 4 ? 'selected' : '') ?>>L</option>
+                    <option value="5"<?php ($produto['unidade_medida_id'] == 5 ? 'selected' : '') ?>>Mm</option>
+                    <option value="6"<?php ($produto['unidade_medida_id'] == 6 ? 'selected' : '') ?>>Cm</option>
+                    <option value="7"<?php ($produto['unidade_medida_id'] == 7 ? 'selected' : '') ?>>M</option>
+                    <option value="8"<?php ($produto['unidade_medida_id'] == 8 ? 'selected' : '') ?>>M²</option>
                 </select>
             </label>
         </div>
 
         <div class="coluna">
 
-            <input type="text" placeholder="Valor" class="escrever_opcao">
+            <input type="text" value="<?php echo $produto['valor']?>" class="escrever_opcao" name="valor">
 
-            <input type="text" placeholder="Quantidade" class="escrever_opcao">
+            <input type="text" value="<?php echo $produto['quantidade']?>" class="escrever_opcao" name="quantidade">
 
         </div>
-
+        <!--sinto que essas categorias são inúteis-->
         <div class="coluna">
 
             <label type="text" placeholder="Categoria" class="escrever_opcao">

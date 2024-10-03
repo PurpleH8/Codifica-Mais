@@ -54,7 +54,7 @@ session_start();
                     </div>
                 </div>
 
-                <a href="/view/editar?id=<?= $id ?>">
+                <a href="/editar?id=<?= $produto['id'] ?>" action="editar.php">
 
                     <button class="botao">Editar</button>
 
@@ -64,7 +64,7 @@ session_start();
 
             </div>
 
-            
+            <?php endforeach; ?>
 
 
             <div class="botaofinal">
@@ -77,7 +77,7 @@ session_start();
 
         </div>
 
-    <?php endforeach; ?>
+    
     <!-- Estrutura da página aqui -->
 
 </body>
