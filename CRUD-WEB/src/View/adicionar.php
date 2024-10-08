@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -29,15 +27,11 @@ session_start();
                 <input type="text" placeholder="Sku" class="escrever_opcao">
 
                 <label for="categoria_adicionar" class="escrever_opcao">
+
                     <select name="categoria_adicionar" class="categoria_adicionar">
-                        <option value="1">Un</option>
-                        <option value="2">Kg</option>
-                        <option value="3">G</option>
-                        <option value="4">L</option>
-                        <option value="5">Mm</option>
-                        <option value="6">Cm</option>
-                        <option value="7">M</option>
-                        <option value="8">M²</option>
+                        <?php foreach ($unidadeMedidas as $unidadeMedida) { ?>
+                            <option value="<?= $unidadeMedida['id'] ?>"><?= $unidadeMedida['nome'] ?></option>
+                        <?php } ?>
                     </select>
                 </label>
             </div>
@@ -72,7 +66,7 @@ session_start();
 
             <button class="botao">CONFIRMAR</button>
 
-            <a href="listar.php">
+            <a href="listar">
                 <button class="botao">Voltar</button>
             </a>
 

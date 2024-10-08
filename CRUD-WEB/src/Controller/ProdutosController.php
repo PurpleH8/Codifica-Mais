@@ -36,18 +36,29 @@ class ProdutosController
        
  
         //fazer consulta no banco de dados buscando o item pelo id
+        //sqls
         $sql = 'SELECT * FROM produto where id = ' . $itemId;
-
+        $sql2 = 'SELECT * FROM unidade_medida';
+        $sql3 = 'SELECT * FROM categoria';
+        //bancos
         $banco = $this->pdo->query($sql);
-
+        $banco2 = $this->pdo->query($sql2);
+        $banco3 = $this->pdo->query($sql3);
+        //quem usará os bancos
         $produto = $banco->fetch(PDO::FETCH_ASSOC);
+        $unidadeMedidas = $banco2->fetchAll(PDO::FETCH_ASSOC);
+        $categorias = $banco3->fetchAll(PDO::FETCH_ASSOC);
         //dd($produto);
         //salvar o item retornado  no banco de dados em uma variavel
         require __DIR__ . "/../View/editar.php";
     }
     public function criar() {
         //echo 'blz?';
-         require __DIR__ . "/../View/adicionar.php";
+        $sql = 'SELECT * FROM unidade_medida'; 
+        $banco = $this->pdo->query($sql);
+        $unidadeMedidas = $banco->fetchAll(PDO::FETCH_ASSOC);
+        
+        require __DIR__ . "/../View/adicionar.php";
     }
     public function deletar() {
         $itemId = $_GET['id'];

@@ -30,14 +30,13 @@
 
             <label for="unidade_medida" class="escrever_opcao">
                 <select name="unidade_medida" class="categoria_adicionar">
-                    <option value="1" <?php ($produto['unidade_medida_id'] == 1 ? 'selected' : '') ?>>Un</option>
-                    <option value="2"<?php ($produto['unidade_medida_id'] == 2 ? 'selected' : '') ?>>Kg</option>
-                    <option value="3"<?php ($produto['unidade_medida_id'] == 3 ? 'selected' : '') ?>>G</option>
-                    <option value="4"<?php ($produto['unidade_medida_id'] == 4 ? 'selected' : '') ?>>L</option>
-                    <option value="5"<?php ($produto['unidade_medida_id'] == 5 ? 'selected' : '') ?>>Mm</option>
-                    <option value="6"<?php ($produto['unidade_medida_id'] == 6 ? 'selected' : '') ?>>Cm</option>
-                    <option value="7"<?php ($produto['unidade_medida_id'] == 7 ? 'selected' : '') ?>>M</option>
-                    <option value="8"<?php ($produto['unidade_medida_id'] == 8 ? 'selected' : '') ?>>M²</option>
+                    <?php foreach ($unidadeMedidas as $unidadeMedida) { ?>
+                        <option
+                        value="<?= $unidadeMedida['id'] ?>"
+                        <?= ($produto['unidade_medida_id'] == $unidadeMedida['id'] ? 'selected' : '')?> >
+                            <?= $unidadeMedida['nome'] ?>
+                        </option>
+                    <?php } ?>
                 </select>
             </label>
         </div>
@@ -49,17 +48,18 @@
             <input type="text" value="<?php echo $produto['quantidade']?>" class="escrever_opcao" name="quantidade">
 
         </div>
-        <!--sinto que essas categorias são inúteis-->
+            <!--sinto que essas categorias são inúteis-->
         <div class="coluna">
 
             <label type="text" placeholder="Categoria" class="escrever_opcao">
                 <select name="categoria_adicionar" class="categoria_adicionar">
-                    <option value="1">Eletrônicos</option>
-                    <option value="2">Eletrodomésticos</option>
-                    <option value="3">Móveis</option>
-                    <option value="4">Decorações</option>
-                    <option value="5">Vestuários</option>
-                    <option value="6">Outros</option>
+                <?php foreach ($categorias as $categoria) { ?>
+                        <option
+                        value="<?= $categoria['id'] ?>"
+                        <?= ($produto['unidade_medida_id'] == $categoria['id'] ? 'selected' : '')?> >
+                            <?= $categoria['nome'] ?>
+                        </option>
+                    <?php } ?>
                 </select>
             </label>
         </div>
@@ -71,7 +71,7 @@
     <div class="botaofinal">
 
         <button class="botao">CONFIRMAR</button>
-        <a href="listar.php"><button class="botao">Voltar</button></a>
+        <a href="listar"><button class="botao">Voltar</button></a>
 
     </div>
         
