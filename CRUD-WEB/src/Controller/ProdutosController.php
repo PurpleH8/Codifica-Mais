@@ -53,9 +53,12 @@ class ProdutosController
         require __DIR__ . "/../View/editar.php";
     }
     public function criar() {
-        //echo 'blz?';
+        //sqls
         $sql = 'SELECT * FROM unidade_medida'; 
+        $sql2 = '';
+        //bancos
         $banco = $this->pdo->query($sql);
+        //qm usará os bancos
         $unidadeMedidas = $banco->fetchAll(PDO::FETCH_ASSOC);
         
         require __DIR__ . "/../View/adicionar.php";
@@ -63,9 +66,11 @@ class ProdutosController
     public function deletar() {
         $itemId = $_GET['id'];
 
-        $sql = 'DELETE * FROM produto where id = ' . $itemId;
+        $sql = 'DELETE * FROM produto where id = ?' . $itemId;
         $banco = $this->pdo->query($sql);
-        $produto = $banco->fetchAll(PDO::FETCH_ASSOC);
+        $banco->bindvalue(1,$itemId);
+        $banco->execute();
+
 
         require __DIR__ . "/../View/deletar.php";
     }

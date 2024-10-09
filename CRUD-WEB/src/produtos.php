@@ -35,7 +35,7 @@ class Produto {
     public function getValor(): int{
         return $this->valor;
     }
-    
+}
 
     /*
     public function listar() {

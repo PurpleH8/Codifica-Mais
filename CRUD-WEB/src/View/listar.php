@@ -38,8 +38,9 @@ session_start();
                     </div>
 
                     <div>
-                        <button class="botao botao_red"> <a onclick="return confirm('deletar?')"
-                                href="/View/deletar?id=<?= $id ?>"> Deletar</button> </a>
+                        <a href="/View/deletar?id=<?= $id ?>" action="deletar.php"></a>
+                        <button class="botao botao_red" value="Excluir"> <a onclick="return confirm('deletar?')"
+                            href="/View/deletar?id=<?= $id ?>"> Deletar</button> </a>
                     </div>
 
                 </div>

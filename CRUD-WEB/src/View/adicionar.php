@@ -1,4 +1,9 @@
+<?php
 
+ var_dump($_POST)
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,7 +23,7 @@
         <h1 class="titulo_pagina">Novo Item</h1>
         
         <div class="colunas">
-            <div class="coluna">
+            <div method="post" class="coluna">
                 <input type="text" placeholder="Nome Item" class="nome_item">
             </div>
 
